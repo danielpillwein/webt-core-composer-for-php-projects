@@ -10,16 +10,22 @@ use Endroid\QrCode\Label\Font\NotoSans;
 use Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeMargin;
 use Endroid\QrCode\Writer\PngWriter;
 
+$phone_number = "+4312233444";
+
+if (isset($_POST["tel"])) {
+    $phone_number = $_POST["tel"];
+}
+
 $result = Builder::create()
     ->writer(new PngWriter())
     ->writerOptions([])
-    ->data('tel:+4312233444')
+    ->data('tel:' . $phone_number)
     ->encoding(new Encoding('UTF-8'))
     ->errorCorrectionLevel(new ErrorCorrectionLevelHigh())
     ->size(300)
     ->margin(10)
     ->roundBlockSizeMode(new RoundBlockSizeModeMargin())
-    ->labelText('User Story 4')
+    ->labelText($phone_number)
     ->labelFont(new NotoSans(20))
     ->labelAlignment(new LabelAlignmentCenter())
     ->validateResult(false)

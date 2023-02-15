@@ -1,0 +1,70 @@
+body {
+    background: #0C0C11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    font-size: 20pt;
+    margin: 0;
+    overflow: hidden;
+}
+
+form {
+    background-color: #15172b;
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+input {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: #303245;
+    color: #EFEEEF;
+    font-size: 14pt;
+}
+
+input[type=submit] {
+    background: #0088DF;
+    margin-top: 1em;
+    padding: 0.5em;
+    width: 100%;
+    border-radius: 0.25rem;
+}
+
+input[type=tel] {
+    margin-top: 0.5em;
+}
+
+input::placeholder {
+    color: #65657b;
+}
+
+.phone-number {
+    background-color: #303245;
+    color: #EFEEEF;
+    font-size: 14pt;
+    width: calc(100% - 1em);
+    padding: 0.5em;
+    border-radius: 0.25rem;
+}
+
+.phone-number input {
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+    form {
+        width: 100%;
+        height: 100%;
+    }
+}
+
