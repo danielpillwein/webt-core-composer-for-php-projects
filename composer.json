@@ -1,0 +1,16 @@
+{
+    "name": "lukas/webt-core-composer-for-php-projects",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Lukas\\WebtCoreComposerForPhpProjects\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Quantompixel",
+            "email": "39237785+Quantompixel@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
