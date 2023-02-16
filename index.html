@@ -11,7 +11,14 @@
         <label for="tel">Your Phone Number</label>
         <input class="input" type="tel" name="tel" id="tel" placeholder="+43123515355">
     </div>
-    <input class="input" type="submit" value="generate QR-Code">
+    <input class="input" type="submit" id="submit" value="generate QR-Code" disabled>
 </form>
+<script>
+    const telInput = document.getElementById("tel");
+    const submit = document.getElementById("submit");
+    telInput.addEventListener("input", (event) => {
+        submit.disabled = !event.target.value.match(/^[0-9-+\s]+$/);
+    });
+</script>
 </body>
 </html>
